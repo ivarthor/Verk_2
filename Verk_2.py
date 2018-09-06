@@ -1,4 +1,4 @@
-#from sys import argv
+from sys import argv
 import bottle
 from bottle import *
 
@@ -62,4 +62,5 @@ def static_skra(pics):
 def error404(error):
     return "ERROR"
 
-bottle.run(host="localhost", port=8080, debug=True)
+#bottle.run(host="localhost", port=8080, debug=True)
+bottle.run(host='0.0.0.0', port=argv[1])
